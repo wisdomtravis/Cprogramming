@@ -1,3 +1,5 @@
+
+
 // Online C compiler to run C program online
 #include <stdio.h>
 #include <stdbool.h>
@@ -40,5 +42,36 @@ int main() {
     } else if (number == 0){
         printf("the number entered is equals to zero");
     }
+    return 0;
+}
+
+//write a program to determine, number of days, months, days, years
+#include<stdio.h>
+
+int main()
+{
+    int numberOfDays;
+    int years;
+    int months;
+    int days;
+
+    /* Reading number of days from user */
+    printf("Enter number of days: ");
+    scanf("%d", &numberOfDays);
+
+    /* Calculating years */
+    years = numberOfDays / 365;
+
+    // Calculating months
+    months = (numberOfDays - years *365) / 30;
+
+    // Calculating days
+    days = (numberOfDays - years * 365 - months*30);
+
+    // Displaying results
+    printf("Years = %d", years);
+    printf("\nMonths = %d", months);
+    printf("\nDays = %d", days);
+
     return 0;
 }
